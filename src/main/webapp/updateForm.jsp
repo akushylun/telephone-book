@@ -17,9 +17,9 @@
 			modelAttribute="record">
 
 			<h2 class="form-signin-heading">Update form</h2>
- 			
- 			<input type="hidden" name="record" value="${record.id}" />
- 			
+
+			<input type="hidden" name="record" value="${record.id}" />
+
 			<sf:label path="surname">Surname</sf:label>
 			<sf:input path="surname" class="form-control"
 				value="${record.surname}" />

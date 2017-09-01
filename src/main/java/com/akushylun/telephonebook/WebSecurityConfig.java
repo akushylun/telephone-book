@@ -16,7 +16,7 @@ import com.akushylun.telephonebook.repository.PersonRepository;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     PersonRepository repository;
-    
+
     @Autowired
     @Qualifier("PersonRepositoryHibernate")
     public void setRepository(PersonRepository repository) {
