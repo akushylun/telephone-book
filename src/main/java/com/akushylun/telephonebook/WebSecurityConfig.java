@@ -3,7 +3,6 @@ package com.akushylun.telephonebook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -18,10 +17,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     PersonRepository repository;
     
-    Environment env;
-    
     @Autowired
-    @Qualifier("${personRepository}")
+    @Qualifier("PersonRepositoryHibernate")
     public void setRepository(PersonRepository repository) {
 	this.repository = repository;
     }
